@@ -1,5 +1,6 @@
 import torch.nn as nn
 import torch.nn.functional as F
+from DenoisingAutoEncoder.ConvLSTM import ConvLSTM
 
 
 # define the NN architecture
@@ -15,6 +16,10 @@ class ConvDenoiser(nn.Module):
         self.conv3 = nn.Conv2d(16, 8, 3, padding=1)
         # pooling layer to reduce x-y dims by two; kernel and stride of 2
         self.pool = nn.MaxPool2d(2, 2)
+
+        # clstm = ConvLSTM(input_channels=32, hidden_channels=[128, 64, 64], kernel_size=3, step=2)
+        # lstm_outputs = clstm(cnn_features)
+        # hidden_states = lstm_outputs[0]
 
         ## decoder layers ##
         # transpose layer, a kernel of 2 and a stride of 2 will increase the spatial dims by 2
