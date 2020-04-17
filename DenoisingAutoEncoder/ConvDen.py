@@ -17,7 +17,7 @@ class ConvDenoiser(nn.Module):
         # pooling layer to reduce x-y dims by two; kernel and stride of 2
         self.pool = nn.MaxPool2d(2, 2)
 
-        # clstm = ConvLSTM(input_channels=32, hidden_channels=[128, 64, 64], kernel_size=3, step=2)
+        # clstm = ConvLSTM(input_channels=32, hidden_channels=[128, 64, 64], kernel_size=3, step=1)
         # lstm_outputs = clstm(cnn_features)
         # hidden_states = lstm_outputs[0]
 
