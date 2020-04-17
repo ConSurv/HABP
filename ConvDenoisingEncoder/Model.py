@@ -13,11 +13,14 @@ import matplotlib.pyplot as plt
 
 
 class Config:
-    DATASET_PATH = "../../data/UCSD_Anomaly_Dataset.v1p2/UCSDped1/Train".replace('\\', '/')
-    SINGLE_TEST_PATH = "../../data/UCSD_Anomaly_Dataset.v1p2/UCSDped1/Test/Test032".replace('\\', '/')
+     # DATASET_PATH = "../../data/UCSD_Anomaly_Dataset.v1p2/UCSDped1/Train".replace('\\', '/')
+    DATASET_PATH = "/content/HABP/DenoisingAutoEncoder/HABP/ConvDenoisingEncoder/data/UCSD_Anomaly_Dataset.v1p2/UCSDped1/Train".replace('\\', '/')"
+    # SINGLE_TEST_PATH = "../../data/UCSD_Anomaly_Dataset.v1p2/UCSDped1/Test/Test032".replace('\\', '/')
+    SINGLE_TEST_PATH = "/content/HABP/DenoisingAutoEncoder/HABP/ConvDenoisingEncoder/data/UCSD_Anomaly_Dataset.v1p2/UCSDped1/Train".replace('\\', '/')"
     BATCH_SIZE = 4
     EPOCHS = 3
-    MODEL_PATH = "../model.hdf5".replace('\\', '/')
+    # MODEL_PATH = "../model.hdf5".replace('\\', '/')
+    MODEL_PATH = "/content/HABP/DenoisingAutoEncoder/HABP/ConvDenoisingEncoder/model.hdf5".replace('\\', '/')"
 
 
 def get_clips_by_stride(stride, frames_list, sequence_size):
