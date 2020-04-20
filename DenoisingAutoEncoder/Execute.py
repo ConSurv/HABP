@@ -79,7 +79,6 @@ for epoch in range(1, n_epochs + 1):
         train_loss
     ))
 
-
 def test():
     # obtain one batch of test images
     dataiter = iter(test_loader)
