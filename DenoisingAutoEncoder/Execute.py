@@ -5,6 +5,7 @@ import torchvision.transforms as transforms
 import torch.nn as nn
 import torch.nn.functional as F
 from DenoisingAutoEncoder.ConvDen import ConvDenoiser
+from DenoisingAutoEncoder.Dataset import  Dataset
 import matplotlib.pyplot as plt
 
 # convert data to torch.FloatTensor
@@ -24,6 +25,10 @@ model = ConvDenoiser()
 num_workers = 0
 # how many samples per batch to load
 batch_size = 20
+
+# prepare own data loaders
+# train_loader = torch.utils.data.DataLoader(Dataset(train_data, train_labels), batch_size=batch_size, num_workers=num_workers)
+# test_loader = torch.utils.data.DataLoader(Dataset(test_data, test_labels), batch_size=batch_size, num_workers=num_workers)
 
 # prepare data loaders
 train_loader = torch.utils.data.DataLoader(train_data, batch_size=batch_size, num_workers=num_workers)
